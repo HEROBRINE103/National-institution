@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0e0e14;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(14,14,20,0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: hotpink;
+}
+
+nav a {
+  margin-left: 25px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: hotpink;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.9)),
+  url('https://images.unsplash.com/photo-1523240795612-9a054b0db644') center/cover fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 15px 0 30px;
+  color: #ff9ad5;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 14px 34px;
+  border: none;
+  background: linear-gradient(135deg, hotpink, deeppink);
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 0 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid hotpink;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255,20,147,.5);
+}
+
+/* SECTIONS */
+section {
+  padding: 120px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+  color: hotpink;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(255,20,147,.25);
+}
+
+/* FEATURES */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 40px;
+  background: #161622;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+/* SERVICES */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #161622;
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+/* PARALLAX BREAK */
+.parallax-break {
+  height: 50vh;
+  background: url('https://images.unsplash.com/photo-1513258496099-48168024aec0') center/cover fixed;
+}
+
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+  background: #161622;
+}
+
+.stats span {
+  font-size: 3rem;
+  color: hotpink;
+}
+
+/* FOOTER */
+footer {
+  padding: 40px;
+  text-align: center;
+  background: #0b0b10;
+  position: relative;
+}
+
+#topBtn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  padding: 10px 16px;
+  border: none;
+  background: hotpink;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* REVEAL ANIMATIONS */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.left { transform: translateX(-80px); }
+.right { transform: translateX(80px); }
+.bottom { transform: translateY(80px); }
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+  background: linear-gradient(135deg, #160014, #2b001f);
+  padding: 60px 20px 40px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-content h3 {
+  font-size: 26px;
+  color: #ff4fa3;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  color: #ccc;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.social {
+  width: 50px;
+  height: 50px;
+  background: #1e0018;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4fa3;
+  font-size: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 25px rgba(255, 20, 147, 0.25);
+}
+
+.social:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 20px 45px rgba(255, 20, 147, 0.55);
+  color: #fff;
+}
+
+/* Platform glow colors */
+.social.whatsapp:hover {
+  background: #25D366;
+}
+.social.facebook:hover {
+  background: #1877f2;
+}
+.social.instagram:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+.social.youtube:hover {
+  background: #ff0000;
+}
+
+/* ===============================
+   BACK TO TOP BUTTON
+================================ */
+#topBtn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #ff4fa3;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.4s;
+  box-shadow: 0 15px 35px rgba(255, 20, 147, 0.5);
+}
+
+#topBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px rgba(255, 20, 147, 0.7);
+}
